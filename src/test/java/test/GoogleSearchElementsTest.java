@@ -3,10 +3,10 @@ package test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.GoogleSearchPage;
+import pageObjects.GoogleSearchPageElements;
 
 
-public class GoogleSearchTest {
+public class GoogleSearchElementsTest {
 	
 	static WebDriver driver = null;
 	
@@ -22,9 +22,9 @@ public class GoogleSearchTest {
 		//goto google.com
 		driver.get("https://google.com");		
 		//enter text in search box
-		GoogleSearchPage.textbox_search(driver).sendKeys("Automation Step by Step");		
+		GoogleSearchPageElements.textbox_search(driver).sendKeys("Automation Step by Step");		
 		//click on search button
-		GoogleSearchPage.textbox_search(driver).sendKeys(Keys.RETURN);
+		GoogleSearchPageElements.textbox_search(driver).sendKeys(Keys.RETURN);
 		//close browser
 		driver.close();		
 		System.out.println("Test completed");
